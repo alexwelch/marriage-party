@@ -1,1 +1,291 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex & Stephani - Our Celebration!</title>
+    <style>
+        body {
+            font-family: 'Lora', serif; /* Example font - consider loading via Google Fonts */
+            margin: 0;
+            padding: 0;
+            background-color: #fdfaf6; /* Warm cream background */
+            color: #4a4a4a; /* Softer dark grey */
+            line-height: 1.7;
+        }
+
+	/* General Link Styling */
+	a {
+	    color: #8c6b5d; /* Muted terracotta/brown - same as section H2s */
+	    text-decoration: none; /* Remove underline by default for a cleaner look */
+	    transition: color 0.3s ease, text-decoration 0.3s ease;
+	}
+
+	a:hover,
+	a:focus { /* :focus is good for accessibility */
+	    color: #a07e68; /* Lighter warm accent - same as button background */
+	    text-decoration: underline; /* Add underline on hover/focus */
+	}
+
+	/* Optional: If you want links within specific sections to behave differently,
+	   you can target them more specifically, e.g., .content-block a { ... }
+	   But the above will cover general links throughout the page.
+	*/
+
+	/* Ensure the RSVP button retains its specific styling and isn't overridden
+	   if its class is very generic. The .rsvp-button class is specific enough. */
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #e8e0d5; /* Muted warm color */
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px; /* Adjust as needed */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif; /* Example font */
+            font-size: 3em;
+            color: #5c4033; /* Warm brown */
+            margin: 0 0 10px 0;
+        }
+        .hero p.subtitle {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 1.1em;
+            color: #7a5c58;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 50px 0;
+        }
+        section:nth-child(even) { /* Alternating subtle background for sections if desired */
+            /* background-color: #f7f2ec; */
+        }
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            color: #8c6b5d; /* Muted terracotta/brown */
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .content-block {
+            padding: 20px;
+        }
+
+        /* Intro Text */
+        #intro p {
+            font-size: 1.1em;
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        /* Q&A Simple List Style */
+        .qa-list .qa-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #d3c1b0; /* Dashed warm separator */
+        }
+        .qa-list .qa-item:last-child {
+            border-bottom: none;
+        }
+        .qa-question {
+            font-weight: bold;
+            color: #5c4033;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        .qa-answer p {
+            margin: 0;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        /* Map & Denver Recs */
+        .map-placeholder {
+            background-color: #f0e6dd;
+            padding: 40px;
+            text-align: center;
+            border-radius: 6px;
+            margin-top: 20px;
+            color: #7a5c58;
+            font-style: italic;
+        }
+        .recs-container h3 {
+            font-family: 'Playfair Display', serif;
+            color: #8c6b5d;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .recs-list {
+            list-style: none;
+            padding: 0;
+        }
+        .recs-list li {
+            background-color: #f7f2ec;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border-left: 4px solid #b08d79; /* Accent border */
+        }
+        .recs-list h4 { margin-top: 0; color: #5c4033; }
+
+        /* RSVP Section */
+        #rsvp {
+            text-align: center;
+            background-color: #e8e0d5; /* Match hero or a complementary warm tone */
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .rsvp-button {
+            display: inline-block;
+            background-color: #a07e68; /* Warm accent color */
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 20px; /* Rounded button */
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .rsvp-button:hover {
+            background-color: #8c6b5d;
+	    color: #fff;
+	    text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            background-color: #d3c1b0; /* Lighter warm footer */
+            color: #5c4033;
+        }
+        footer p { margin: 5px 0; font-family: 'Nunito Sans', sans-serif; }
+    </style>
+    <!-- Consider adding Google Fonts link here:
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    -->
+</head>
+<body>
+
+    <header class="hero">
+        <img src="us.jpg" alt="Alex and Stephani"> <!-- Replace with your photo -->
+        <h1>We (Already Got) Married!</h1>
+        <p class="subtitle"><a href="https://docs.google.com/forms/d/e/1FAIpQLScrq2uVpP1uKrvDZZcqqaLk5Ix-5WQU7Z8NkL2TmiCNWMQDjQ/viewform?usp=header" target="_blank">Come celebrate with us in Denver!</a></p>
+            
+    </header>
+
+    <section id="intro">
+        <div class="container">
+            <h2>Our Little Secret & The Big Party</h2>
+            <p>On June 20th, we tied the knot in Victoria, British Columbia, and we want to celebrate with our friends and family! We will have a reception in September with food, music, dancing, and boring talking in the corner while complaining about the music. We hope you can join us and look forward to celebrating this next chapter with you!</p>
+        </div>
+    </section>
+
+    <section id="details">
+        <div class="container">
+            <h2>The Celebration Details</h2>
+            <div class="content-block qa-list">
+                <div class="qa-item">
+                    <div class="qa-question">When's the Party?</div>
+                    <div class="qa-answer"><p>September 12, 2025, at 6:00 PM.</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">Where To?</div>
+                    <div class="qa-answer"><p><a href="https://maps.app.goo.gl/2sh2rjgqkZHkziATA">Space Gallery in Denver, CO</a>.</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">Parking Situation?</div>
+                    <div class="qa-answer"><p>[Language from Space Gallery. Placeholder: Good news! Parking details coming soon.]</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">What to Wear?</div>
+                    <div class="qa-answer"><p>We encourage people to dress in whatever makes them comfortable and look forward to seeing what that looks like. However, for those looking for some dress-peration, we suggest summer cocktail attire.</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">Denver Weather in Sept?</div>
+                    <div class="qa-answer"><p>The weather in Denver in September can be unpredictable, but typically we see highs in the 70’s and lows in the 50s or 60s. While the venue will have both indoor and outdoor space, please come prepared for a big swing in temperature after the sun goes down.</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">Can We Bring the Kiddos?</div>
+                    <div class="qa-answer"><p>Kids of all ages and sizes are more than welcome to attend, but the amount of kid-friendly activities provided may be limited. Please let us know if you plan to bring your offspring and we can increase the amount of steak knives and fireworks on site.</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">Gifts?</div>
+                    <div class="qa-answer"><p>Unfortunately, we are unable to accept any gifts of any kind, due to the fact that we don’t want to. If, however, you wish to contribute to our future together, you still cannot give us any gifts.</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">What's Happening at the Reception?</div>
+                    <div class="qa-answer"><p>While we won’t have many of the traditional wedding activities (like an actual ceremony where we get married, which is typical), you can expect plenty of food, dancing, socialization, and more dancing.</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">Food Glorious Food?</div>
+                    <div class="qa-answer"><p>Yes! There will be food during cocktail hour as well as a taco buffet for dinner. If you have any dietary restrictions, please let us know.</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">Libations?</div>
+                    <div class="qa-answer"><p>Obviously.</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">Getting Around?</div>
+                    <div class="qa-answer"><p>While we aren’t providing transportation to/from the venue, there will be plenty of parking and Uber/Lyft available. Alex has also offered up his top of the line road, gravel, and mountain bikes to anyone looking for an alternative form of transportation - first come, first serve.</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">Is there a Theme? (Please say yes!)</div>
+                    <div class="qa-answer"><p>While 50% of us would like there to be a theme, there will not be a theme. At least not a theme that 50% of us know about.</p></div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-question">Traveling to Denver? Where to Stay?</div>
+                    <div class="qa-answer">
+                        <p>Our <a title="map" href="https://www.google.com/maps/d/viewer?mid=1a0SBXgzcW827Vm0Ey3q4Rl6gjXdJ1Pw&femb=1&ll=39.60425032922986%2C-105.11727935&z=10">"Super sophisticated and unbiased map"</a> is in the works! Denver has lovely spots in Downtown, Cherry Creek, or RiNo.</p>
+                    </div>
+                </div>
+                <div class="qa-item recs-container">
+                    <div class="qa-question">Things to Do in Denver?</div>
+                    <div class="qa-answer">
+                        <p>You bet! Here are some of our faves:</p>
+                        <ul class="recs-list">
+                            <li><h4>Our Favorite Bites</h4><p>Mercantile Dining & Provision, Hop Alley, Annette (Stanley Marketplace)</p></li>
+                            <li><h4>Local Brews & Sips</h4><p>TRVE Brewing, Cerebral Brewing, Death & Co Denver</p></li>
+                            <li><h4>Outdoor Adventures</h4><p>Hike or bike the Cherry Creek Trail, visit City Park, explore the foothills near Golden.</p></li>
+                            <li><h4>City Sights</h4><p>Meow Wolf Denver, Clyfford Still Museum, walk the 16th Street Mall (or don't, it's a bit touristy, but there's a free bus!).</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rsvp">
+        <div class="container">
+            <h2>Join the Fun!</h2>
+            <p>Please RSVP by <strong>August 15th, 2025</strong> so we know how many tacos to order!</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScrq2uVpP1uKrvDZZcqqaLk5Ix-5WQU7Z8NkL2TmiCNWMQDjQ/viewform?usp=header" class="rsvp-button" target="_blank">RSVP Here</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Can't wait to see you there!</p>
+            <p>With Love, Alex & Stephani</p>
+        </div>
+    </footer>
+
+</body>
+</html>
