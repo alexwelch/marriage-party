@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Stephani and Alex//Wedding Reception//EN
+BEGIN:VEVENT
+UID:stephani-alex-celebration-20250912@stephaniwilliams.and.alexwelch.com
+DTSTAMP:20250529T180000Z
+DTSTART:20250913T000000Z
+DTEND:20250913T040000Z
+SUMMARY:Stephani and Alex's Marriage Celebration
+LOCATION:Space Gallery, 400 Santa Fe Dr, Denver, CO 80204, USA
+DESCRIPTION:please don't forget to RSVP! Visit stephaniwilliams.and.alexwelch.com for more details.
+URL:https://stephaniwilliams.and.alexwelch.com
+END:VEVENT
+END:VCALENDAR
