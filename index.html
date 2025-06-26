@@ -129,6 +129,9 @@
             color: #7a5c58;
             font-style: italic;
         }
+        .recs-container {
+            display: none;
+        }
         .recs-container h3 {
             font-family: 'Playfair Display', serif;
             color: #8c6b5d;
@@ -168,10 +171,11 @@
             transition: background-color 0.3s ease;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .rsvp-button:hover {
+        .rsvp-button:hover,
+        .rsvp-button:focus {
             background-color: #8c6b5d;
-	    color: #fff;
-	    text-decoration: none;
+	        color: #fff;
+	        text-decoration: none;
         }
 
         /* Footer */
@@ -266,7 +270,7 @@ target="_blank" rel="nofollow">Add to google calendar</a>)</p></div>
                 <div class="qa-item">
                     <div class="qa-question">If we are travelling to Denver, where should we stay?</div>
                     <div class="qa-answer">
-                        <p>Our <a title="map" href="https://www.google.com/maps/d/viewer?mid=1a0SBXgzcW827Vm0Ey3q4Rl6gjXdJ1Pw&femb=1&ll=39.60425032922986%2C-105.11727935&z=10">"Super sophisticated and unbiased map"</a> is in the works! Denver has lovely spots in Downtown, Cherry Creek, or RiNo.</p>
+                        <p>Our <a title="map" target="_blank" href="https://www.google.com/maps/d/viewer?mid=1a0SBXgzcW827Vm0Ey3q4Rl6gjXdJ1Pw&femb=1&ll=39.60425032922986%2C-105.11727935&z=10">"Super sophisticated and unbiased map"</a> is in the works! Denver has lovely spots in Downtown, Cherry Creek, or RiNo.</p>
                     </div>
                 </div>
                 <div class="qa-item recs-container">
@@ -274,14 +278,6 @@ target="_blank" rel="nofollow">Add to google calendar</a>)</p></div>
                     <div class="qa-answer">
                         <p>You bet! Here are some of our faves:</p>
                         <ul class="recs-list">
-                            <li>
-                                <h4>Friday (6/20) morning hike and bike</h4>
-                                <p>Stephani will lead a hike and Alex a mountain bike ride at <a href="https://maps.app.goo.gl/iUkEu1ZcpdnFqzQi8">Apex</a></p>
-                            </li>
-                            <li>
-                                <h4>Saturday (6/21) afternoon hike and bike</h4>
-                                <p>Stephani will lead a hike and Alex a gravel bike ride at [TBD]</p>
-                            </li>
                             <li>
                                 <h4>City Sights</h4>
                                 <p>Meow Wolf Denver, Train Museum, Denver Art Museum, Union Station, Casa Bonita, and more!</p>
