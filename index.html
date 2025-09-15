@@ -76,6 +76,17 @@
         section {
             padding: 50px 0;
         }
+        #photos-callout {
+            background-color: #d3c1b0; /* Light warm color */
+            border: #5c4033 3px solid;
+            color: #5c4033;
+            text-align: center;
+            padding: 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            font-size: larger;
+        }
         section:nth-child(even) { /* Alternating subtle background for sections if desired */
             /* background-color: #f7f2ec; */
         }
@@ -196,11 +207,15 @@
     -->
 </head>
 <body>
-
+    <section id="photos-callout">
+        <div class="container">
+            <p>📷 We are crowdsourcing photos: <a href="https://photos.app.goo.gl/uRGdMEX2KdvrSJeU7" target="_blank">View & add photos »</a></p>            
+        </div>
+    </section>
     <header class="hero">
         <img src="us.jpg" alt="Alex and Stephani"> <!-- Replace with your photo -->
         <h1>We (Already Got) Married!</h1>
-        <p class="subtitle"><a href="https://docs.google.com/forms/d/e/1FAIpQLScrq2uVpP1uKrvDZZcqqaLk5Ix-5WQU7Z8NkL2TmiCNWMQDjQ/viewform?usp=header" target="_blank">RSVP here »</a></p>
+        
             
     </header>
 
@@ -298,9 +313,9 @@ target="_blank" rel="nofollow">Add to google calendar</a>)</p></div>
 
     <section id="rsvp">
         <div class="container">
-            <h2>Join Us!</h2>
-            <p>Please RSVP ASAP so we know how many tacos to order!</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScrq2uVpP1uKrvDZZcqqaLk5Ix-5WQU7Z8NkL2TmiCNWMQDjQ/viewform?usp=header" class="rsvp-button" target="_blank">RSVP Here »</a>
+            <h2 title="Pictures">📷</h2>
+            <p>We blew our budget on the DJ. Help us with the photo crowdsourcing:</p>
+            <a href="https://photos.app.goo.gl/uRGdMEX2KdvrSJeU7" class="rsvp-button" target="_blank">View & add photos »</a>
         </div>
     </section>
 
